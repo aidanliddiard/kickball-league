@@ -6,7 +6,7 @@ import { fetchTeamDetails } from '../services/teams';
 export default function TeamDetails() {
   const params = useParams();
 
-  const [team, setTeam] = useState({});
+  const [team, setTeam] = useState({ players: [] });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,7 +17,6 @@ export default function TeamDetails() {
     fetchData();
   }, [params.id]);
 
-  console.log(team.players);
   return (
     <div key={team.id}>
       <h3>{team.name}</h3>
@@ -25,8 +24,8 @@ export default function TeamDetails() {
         {team.city}, {team.state}
       </h6>
       <ul>
-        {team.players.map((players) => (
-          <li key={players.id}>{players.name}</li>
+        {team.players.map((player) => (
+          <li key={player.id}>{player.name}</li>
         ))}
       </ul>
     </div>
