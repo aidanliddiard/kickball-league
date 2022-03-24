@@ -3,6 +3,7 @@ import './App.css';
 import Main from './Views/Main';
 import Teams from './Views/Teams';
 import TeamDetails from './Views/TeamDetails';
+import Players from './Views/Players';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route exact path="/teams/:id">
           <TeamDetails />
+        </Route>
+        <Route exact path="/players">
+          <Players />
         </Route>
       </Switch>
     </BrowserRouter>

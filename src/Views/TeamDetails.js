@@ -11,7 +11,6 @@ export default function TeamDetails() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchTeamDetails(params.id);
-      console.log(data);
       setTeam(data);
     };
     fetchData();
