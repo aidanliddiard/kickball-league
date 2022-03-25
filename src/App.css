@@ -1,5 +1,22 @@
 .App {
-  text-align: center;
+  padding: 20px;
+}
+
+.Header {
+  list-style: none;
+  width: 100%;
+}
+.Header ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+.Header li {
+  padding: 7px;
+  font-size: 1.3rem;
+}
+h1 {
+  margin-top: -50px;
 }
 
 .App-logo {
