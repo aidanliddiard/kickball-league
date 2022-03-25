@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { fetchTeamDetails } from '../services/teams';
 
 export default function TeamDetails() {
@@ -24,7 +24,9 @@ export default function TeamDetails() {
       </h6>
       <ul>
         {team.players.map((player) => (
-          <li key={player.id}>{player.name}</li>
+          <li key={player.id}>
+            <Link to={`/players/${player.id}`}>{player.name}</Link>
+          </li>
         ))}
       </ul>
     </div>

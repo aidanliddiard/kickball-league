@@ -8,7 +8,6 @@ export default function Players() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchPlayers();
-      console.log(data);
       setPlayers(data);
     };
     fetchData();
